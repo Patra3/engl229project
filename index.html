@@ -358,7 +358,7 @@ Try this voice recognition module for yourself!
                             <div class="card">
                                 <div class="card-body">
                                     Say "search for..." followed by what you want to see! A new browser tab will open up with the result.
-                                    <br><p style="font-size: 10px;">* Microphone permissions MUST be enabled.</p>
+                                    <br><p style="font-size: 10px;">* Microphone permissions MUST be enabled.<br>** Popup blockers must be disabled.</p>
                                 </div>
                             </div>
                         </div>
@@ -397,7 +397,7 @@ Try this voice recognition module for yourself!
                 {
                     annyang.addCommands({
                         'search for *uno': function(uno){
-                            $('#results').attr('src', 'https://duckduckgo.com/?q=' + encodeURIComponent(uno));
+                            window.open('https://duckduckgo.com/?q=' + encodeURIComponent(uno), '_blank');
                         }
                     });
                     annyang.start();
